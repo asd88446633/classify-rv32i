@@ -22,6 +22,10 @@ abs:
     bge t0, zero, done
 
     # TODO: Add your own implementation
+    #-t0 = 0 - (t0)
+    sub t0,x0,t0
+    sw t0,0(a0)
+
 
 done:
     # Epilogue
