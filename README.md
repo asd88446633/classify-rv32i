@@ -1,7 +1,5 @@
 # Assignment 2: Classify
 
-TODO: Add your own descriptions here.
-
 ## 1. ReLU Implementation
 
 ### Functionality:
@@ -86,3 +84,7 @@ D[i][j] = \sum_{k=0}^{\text{cols0}-1} M0[i][k] \times M1[k][j]
 ### Challenges:
 - Managing multiple levels of pointer arithmetic for non-square matrices.
 - Validating matrix dimensions to ensure compatibility.
+
+### About mul:
+During the implementation of this homework, I attempted to write my own multiplication function to replace the prohibited mul instruction.  
+Due to time constraints and the complexity of integrating this custom function into every part of the code, I was unable to complete and fully test the implementation before the submission deadline. As a result, I had to revert to using the mul instruction to ensure the functionality and correctness of the project.
