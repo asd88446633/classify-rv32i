@@ -13,10 +13,6 @@ The `ReLU` (Rectified Linear Unit) function applies the transformation `x = max(
 3. **Pointer Arithmetic**:
    - The pointer to the array is incremented by 4 bytes (size of an integer) to move to the next element.
 
-### Challenges:
-- Handling memory addresses properly to ensure in-place modifications.
-- Accounting for edge cases where the array length is zero.
-
 ---
 
 ## 2. ArgMax Implementation
@@ -33,10 +29,6 @@ The ArgMax function identifies the index of the maximum value in an integer arra
    - If a new maximum is found, both the maximum value and its index are updated.
 4. **Pointer Arithmetic**:
    - The pointer is moved by 4 bytes during each iteration.
-
-### Challenges:
-- Ensuring the index is correctly tracked during updates.
-- Validating input array length and handling edge cases.
 
 ---
 
@@ -56,10 +48,6 @@ result = sum(arr0[i * stride0] * arr1[i * stride1]) for i from 0 to element_coun
      address = base_pointer + (index * stride * 4)
    - Fetches the elements, multiplies them, and accumulates the result.
 
-### Challenges:
-- Correctly calculating addresses using strides and element sizes.
-- Ensuring compatibility with varying strides and offsets.
-
 ---
 
 ## 4. MatMul Implementation
@@ -78,11 +66,6 @@ D[i][j] = sum(M0[i][k] * M1[k][j])
 4. **Pointer Management**:
    - Proper pointer arithmetic is applied to access rows and columns of M0 and M1, respectively.
 
-### About `mul`:
-
-### Challenges:
-- Managing multiple levels of pointer arithmetic for non-square matrices.
-- Validating matrix dimensions to ensure compatibility.
 
 ### About mul:
 During the implementation of this homework, I attempted to write my own multiplication function to replace the prohibited mul instruction.  
