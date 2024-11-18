@@ -29,7 +29,22 @@ relu:
 
 loop_start:
     # TODO: Add your own implementation
+    bge t1, a1, loop_end # Exit loop if all elements processed
 
+    lw t2, 0(a0)        
+    blt t2, zero, set_zero 
+
+next_element:
+    addi a0, a0, 4       
+    addi t1, t1, 1       
+    j loop_start        
+
+set_zero:
+    sw zero, 0(a0)      
+    j next_element      
+
+loop_end:
+    jr ra                
 error:
     li a0, 36          
     j exit          
